@@ -1,0 +1,9 @@
+const prompt = require('prompt-sync')();
+const produto = prompt('Digite o nome do produto: ');
+const num  = Number(prompt('Numero de etiquetas: '));
+for (let i = 1; i <= num/2; i++){
+    console.log(`${produto.padEnd(30, ".")} ${produto.padEnd(30)}`);
+}
+if(num % 2 !== 0){
+    console.log(produto);
+}

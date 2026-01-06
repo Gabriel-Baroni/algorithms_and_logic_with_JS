@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resposta 8_c</title>
+</head>
+<body>
+    <h1>Veterinária Kiara</h1>
+    <form >
+        <p>Valor da Vacina:
+            <input type="number" id="inValor" required autofocus>
+        </p>
+        <p>Possui Convênio:
+            <input type="radio" name="convenio" id="rbSim" checked autofocus>Sim
+            <input type="radio" name="convenio" id="rbNao">Não
+            <br>
+            <select id="inConvenio" style= 'display: inline'> <!-- Só coloquei o style aqui por se tratar de um exemplo-->
+                <option value="Amigo"> Amigo dos Animais</option>
+                <option value="Saude"> Saúde Animal</option>
+            </select>
+        </p>
+        <input type="submit" value="Calcular desconto">
+    </form>
+    
+    <h3 id="outResp1"></h3>
+    <h3 id="outResp2"></h3>
+    <script src="js/resp8_c.js"></script>
+</body>
+</html>

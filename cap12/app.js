@@ -2,8 +2,12 @@ const express = require('express')
 const app = express()
 const port = 3001
 
+const livros = require("./livros")
+
 // MIddelewares
 app.use(express.json())
+
+app.use('/livros', livros)
 
 const log = (req, res, next) =>{
     console.log(`................Acessado em ${new Date()}`)

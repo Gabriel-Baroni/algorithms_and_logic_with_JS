@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "prompt-sync": "^4.2.0"
+    "@react-three/fiber": "^9.5.0",
+    "prompt-sync": "^4.2.0",
+    "three": "^0.182.0"
   }
 }

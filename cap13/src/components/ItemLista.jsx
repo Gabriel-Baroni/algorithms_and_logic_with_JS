@@ -1,4 +1,5 @@
 import "./ItemLista.css"
+
 const ItemLista = (props) =>{
     return(
         <tr>
@@ -6,12 +7,24 @@ const ItemLista = (props) =>{
             <td>{props.titulo}</td>
             <td>{props.autor}</td>
             <td>{props.ano}</td>
-            <td class="text-center">
-                <img src={props.foto} alt="Capa do Livro" width="75"/>
+            <td>{props.preco}</td>
+            <td className="text-center">
+            {props.foto ? (
+                    <img 
+                        src={props.foto} 
+                        alt="Capa" 
+                        width="75" 
+                        onError={(e) => { 
+                            <span>Sem Foto</span>
+                        }}
+                    />
+                ) : (
+                    <span>Sem Foto</span>
+                )}
             </td>
-            <td class="text-center">
-                <i className="exclui text-danger fw-bold" title="Excluir">&#10008;</i>
-                <i className="altera text-success fw-bold ms-2" title="Alterar">&#36;</i>
+            <td className="text-center">
+                <i className="exclui text-danger fw-bold" title="Excluir" onClick={props.excluirClick}>&#10008;</i>
+                <i className="altera text-success fw-bold ms-2" onClick={props.alterarClick} title="Alterar">&#36;</i>
             </td>
         </tr>
     )
